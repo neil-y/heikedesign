@@ -41,12 +41,19 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
-$route['admin/signin'] = "admin/welcome/signin";
-$route['admin/signin_do'] = "admin/welcome/signin_do";
-$route['admin/signout'] = "admin/welcome/signout";
-$route['WEB/MobileApp_android.html'] = "item/show/app_android";
-$route['WEB/MobileApp_ios.html'] = "item/show/app_ios";
-$route['web/pages/cpmm/Default.aspx'] = "item/show/trader_trader";
+$route['course'] = "welcome/course";
+$route['aboutus'] = "welcome/aboutus";
+$route['works'] = "welcome/works";
+$route['contactus'] = "welcome/contactus";
+$route['teachers'] = "welcome/teachers";
+$route['students'] = "welcome/students";
+$route['face'] = "welcome/face";
+//$route['admin/signin'] = "admin/welcome/signin";
+//$route['admin/signin_do'] = "admin/welcome/signin_do";
+//$route['admin/signout'] = "admin/welcome/signout";
+//$route['WEB/MobileApp_android.html'] = "item/show/app_android";
+//$route['WEB/MobileApp_ios.html'] = "item/show/app_ios";
+//$route['web/pages/cpmm/Default.aspx'] = "item/show/trader_trader";
 
 //$route['WEB/ArticleShow.aspx?ID=(:num)'] = "WEB/ArticleShow/$1";
 //$route['WEB/ArticleShow.aspx?ID=11903'] = "news/xyshow/352";
