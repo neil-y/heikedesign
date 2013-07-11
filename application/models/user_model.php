@@ -16,6 +16,7 @@ class User_Model extends CI_Model
 
 	public function listall()
 	{
+		$this->db->order_by("id", "desc");
 		$result = $this->db->get("user_apply");	
 		return $result->result_array();
 	}
