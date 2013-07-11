@@ -18,14 +18,15 @@ class Acl {
 	//权限控制方法
 	function auth(){
 
-		$employer = $this->CI->session->userdata('employer');
+		$user = $this->CI->session->userdata('user');
 
 		if("admin" == $this->uri_prefix1 && 
 			"signin" != $this->uri_prefix2 && 
 			"signin_do" != $this->uri_prefix2 &&
-			"signout" != $this->uri_prefix2){
+			"signout" != $this->uri_prefix2 &&
+			"add" != $this->uri_prefix2){
 
-			if(empty($employer)){
+			if(empty($user)){
 				redirect('/admin/signin');
 			}
 		}
@@ -33,8 +34,8 @@ class Acl {
 		if("admin" == $this->uri_prefix1 && 
 			"signin" == $this->uri_prefix2 ){
 
-			if(!empty($employer)){
-				redirect('/admin/welcome');
+			if(!empty($user)){
+				redirect('/admin');
 			}
 		}
 
